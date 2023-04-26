@@ -5,7 +5,7 @@
  * @array: the collection of integers passed
  * @size: the number of the integers in the array
  *
- * Return: nothing (void)
+ * Return: Nothing(void)
  */
 void bubble_sort(int *array, size_t size)
 {
