@@ -1,6 +1,23 @@
 #include "sort.h"
 
 /**
+ * len_list - find the length of a list
+ * @head: the head list
+ * Return: the length of list
+ */
+int len_list(listint_t *head)
+{
+	int len = 0;
+
+	while (head)
+	{
+		head = head->next;
+		len++;
+	}
+	return (len);
+}
+
+/**
  * insertion_sort_list - implements insertion sort
  * @list: doubly linked list to perform sorting on
  * Return: Nothing
@@ -9,7 +26,7 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *curr, *prev, *next;
 
-	if (*list == NULL)
+	if (list == NULL || *list == NULL || len_list(*list) < 2)
 		return;
 
 	curr = (*list)->next;
